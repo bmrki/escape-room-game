@@ -18,60 +18,6 @@ body {
   padding: 1.5rem;
 }
 
-/* ---------- small screens ----------
-   The game is meant to be opened on whatever is to hand, phone included. None of this
-   changes the layout's shape; it gives back the space that generous desktop padding takes
-   away, so the floor plan and the close-up panels still fit across a narrow screen. */
-@media (max-width: 560px) {
-  #app {
-    padding: 0.75rem;
-    align-items: flex-start;
-  }
-
-  .modal,
-  .closeup {
-    padding: 0.75rem;
-  }
-
-  .modal__panel {
-    padding: 1.25rem 1.1rem 1.1rem;
-  }
-
-  .modal__title {
-    font-size: 1.2rem;
-  }
-
-  .modal__text {
-    font-size: 0.9rem;
-  }
-
-  .closeup__panel {
-    padding: 1.1rem;
-  }
-
-  .end__title {
-    font-size: 1.3rem;
-  }
-
-  .end__dog {
-    width: 132px;
-    height: 132px;
-  }
-
-  /* The periodic table is wider than any phone, so it keeps its horizontal scroll — but the
-     cells shrink and the box gets taller, so all four periods are visible at once instead of
-     one row at a time through a letterbox. */
-  .poster__table {
-    grid-template-columns: repeat(18, 26px);
-    grid-auto-rows: 30px;
-  }
-
-  /* The scroller is a flex item in the close-up panel, so when the panel runs out of height
-     it gets squashed to a one-row letterbox. Pin its size and let the panel scroll instead. */
-  .poster__scroller {
-    flex: none;
-  }
-}
 
 /* ---------- map ---------- */
 
@@ -691,6 +637,21 @@ body {
   touch-action: none; /* stop the browser scrolling the page mid-turn */
 }
 
+/* Fine adjustment beside the dial. Sized to 44px, which is the smallest a fingertip can
+   reliably hit — the dial itself is comfortable to touch but not to aim precisely. */
+.dial-controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.dial-controls__step {
+  min-width: 3.25rem;
+  min-height: 2.75rem;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
 .dial.is-turning { cursor: grabbing; }
 .dial.is-locked,
 .dial.is-solved { cursor: default; }
@@ -1303,4 +1264,70 @@ body {
 
 .room-stub .button {
   margin-top: 1.5rem;
+}
+
+/* ---------- small screens ----------
+   The game is meant to be opened on whatever is to hand, phone included. None of this
+   changes the layout's shape; it gives back the space that generous desktop padding takes
+   away, so the floor plan and the close-up panels still fit across a narrow screen. */
+@media (max-width: 560px) {
+  #app {
+    padding: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .modal,
+  .closeup {
+    padding: 0.75rem;
+  }
+
+  /* On a wide screen the close-up dims only the room, which reads as zooming in on a prop.
+     On a phone the room is barely 250px tall, so that box left tall content — the calendar,
+     the periodic table — squashed and scrolling inside a letterbox. Here it takes the whole
+     viewport instead. Below .modal (50) and the help button (40) is fine: those never coexist
+     with a close-up. */
+  .closeup {
+    position: fixed;
+    z-index: 30;
+    border-radius: 0;
+  }
+
+  .modal__panel {
+    padding: 1.25rem 1.1rem 1.1rem;
+  }
+
+  .modal__title {
+    font-size: 1.2rem;
+  }
+
+  .modal__text {
+    font-size: 0.9rem;
+  }
+
+  .closeup__panel {
+    padding: 1.1rem;
+  }
+
+  .end__title {
+    font-size: 1.3rem;
+  }
+
+  .end__dog {
+    width: 132px;
+    height: 132px;
+  }
+
+  /* The periodic table is wider than any phone, so it keeps its horizontal scroll — but the
+     cells shrink and the box gets taller, so all four periods are visible at once instead of
+     one row at a time through a letterbox. */
+  .poster__table {
+    grid-template-columns: repeat(18, 26px);
+    grid-auto-rows: 30px;
+  }
+
+  /* The scroller is a flex item in the close-up panel, so when the panel runs out of height
+     it gets squashed to a one-row letterbox. Pin its size and let the panel scroll instead. */
+  .poster__scroller {
+    flex: none;
+  }
 }

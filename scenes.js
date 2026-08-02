@@ -894,6 +894,18 @@ function drawJar(element, position) {
   title.textContent = `${element.name} (${element.symbol})`;
   group.appendChild(title);
 
+  // An invisible grab area around the jar. The drawn jar is about 39x44 in scene units, which
+  // on a phone lands at roughly 21x24 real pixels — half the 44px a fingertip needs. This
+  // widens the target to just under the shelf spacing (64) without overlapping its neighbours.
+  // `transparent`, never `none`: a shape with no fill is only hit-tested on its stroke.
+  const grab = document.createElementNS(SVG_NS, "rect");
+  grab.setAttribute("x", "-31");
+  grab.setAttribute("y", "-58");
+  grab.setAttribute("width", "62");
+  grab.setAttribute("height", "70");
+  grab.setAttribute("fill", "transparent");
+  group.appendChild(grab);
+
   const lid = document.createElementNS(SVG_NS, "rect");
   lid.setAttribute("class", "jar__lid");
   lid.setAttribute("x", "-15");
@@ -1625,6 +1637,15 @@ function drawDial(config, { onCommit, enabled }) {
       group.classList.add("is-solved");
       group.removeAttribute("tabindex");
     },
+    // One step, committed — the same contract as an arrow key. The scene puts this behind
+    // on-screen buttons: the dial is a comfortable size to touch, but landing on an exact
+    // value out of 0-120 by rotating it with a fingertip needs about a degree of precision,
+    // which is unreasonable. Drag to get close, then nudge.
+    nudge(delta) {
+      if (!enabled) return;
+      setValue(Math.round((value + delta) / step) * step);
+      onCommit(value);
+    },
     // Wired up by the scene, which owns the overlay needed for coordinate conversion.
     attach(overlay) {
       if (!enabled) return;
@@ -1763,6 +1784,28 @@ function bathroomScene(room) {
   dial.group.classList.add("dial--sauna");
   overlay.appendChild(dial.group);
   dial.attach(overlay);
+
+  // Fine adjustment for anyone without a keyboard, which on a phone is everyone. Real
+  // buttons, sized for a fingertip. Drag the dial to get near, then step onto the number.
+  if (!solved) {
+    const step = dialConfig.step ?? 1;
+    const controls = document.createElement("div");
+    controls.className = "dial-controls";
+
+    const stepButton = (label, delta, ariaLabel) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "button button--quiet dial-controls__step";
+      button.textContent = label;
+      button.setAttribute("aria-label", ariaLabel);
+      button.addEventListener("click", () => dial.nudge(delta));
+      return button;
+    };
+
+    controls.appendChild(stepButton("−", -step, "Mniej"));
+    controls.appendChild(stepButton("+", step, "Więcej"));
+    body.appendChild(controls);
+  }
 
   body.appendChild(hint);
   return body;
