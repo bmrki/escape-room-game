@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460"
+     role="img" aria-label="Łazienka z sauną">
+
+  <defs>
+    <pattern id="baTile" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 0 0.5 H 36 M 0.5 0 V 36" fill="none" stroke="#8fb0ad" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <pattern id="baFloorTile" width="36" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0 0.5 H 36 M 0.5 0 V 24" fill="none" stroke="#7f9e9c" stroke-width="1" opacity="0.5"/>
+    </pattern>
+    <pattern id="baPlanks" width="30" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 0.5 0 V 20" fill="none" stroke="#a9713c" stroke-width="1.4" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- wall + floor -->
+  <rect x="0" y="0" width="720" height="404" fill="#dbebe9"/>
+  <rect x="0" y="0" width="720" height="404" fill="url(#baTile)"/>
+  <rect x="0" y="404" width="720" height="56" fill="#c6dad8"/>
+  <rect x="0" y="404" width="720" height="56" fill="url(#baFloorTile)"/>
+  <rect x="0" y="398" width="720" height="8" fill="#9fbcba"/>
+
+  <!-- Hand shower over the tub. Read from the wall outwards: outlet, sagging coiled hose,
+       then the handset — shaft, wide head, perforated face — held by a ring bracket. -->
+  <path d="M 137 174 q -6 22 -24 20 q -20 -2 -21 -28" fill="none" stroke="#b6c9c7"
+        stroke-width="8" stroke-linecap="round"/>
+  <path d="M 137 174 q -6 22 -24 20 q -20 -2 -21 -28" fill="none" stroke="#8fa8a6"
+        stroke-width="8" stroke-linecap="round" stroke-dasharray="1.5 6"/>
+  <g stroke="#8fa8a6" stroke-width="2.5" stroke-linejoin="round">
+    <rect x="74" y="148" width="20" height="18" rx="5" fill="#c9d9d7"/>
+    <rect x="130" y="122" width="14" height="52" rx="7" fill="#eef5f4"/>
+    <rect x="118" y="94" width="38" height="32" rx="9" fill="#eef5f4"/>
+    <rect x="122" y="114" width="30" height="12" rx="5" fill="#c9d9d7" stroke-width="1.6"/>
+  </g>
+  <g fill="#8fa8a6">
+    <circle cx="128" cy="120" r="1.5"/><circle cx="135" cy="120" r="1.5"/>
+    <circle cx="142" cy="120" r="1.5"/><circle cx="149" cy="120" r="1.5"/>
+  </g>
+  <!-- the bracket: a wall plate and a ring around the shaft -->
+  <g stroke="#8fa8a6" stroke-width="2.5" stroke-linejoin="round">
+    <rect x="160" y="132" width="9" height="24" rx="3" fill="#c9d9d7"/>
+    <path d="M 160 144 H 148" fill="none" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="137" cy="144" r="11" fill="none" stroke-width="4"/>
+  </g>
+  <g fill="#8fbcd6">
+    <circle cx="124" cy="131" r="2.2"/>
+    <circle cx="151" cy="133" r="1.7"/>
+  </g>
+
+  <!-- bathtub -->
+  <g stroke="#8fa8a6" stroke-width="3" stroke-linejoin="round">
+    <rect x="24" y="268" width="216" height="124" rx="20" fill="#f7fbfa"/>
+    <rect x="40" y="284" width="184" height="92" rx="14" fill="#d6ebe8"/>
+    <path d="M 214 268 V 250 h -22" fill="none" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- towel rail -->
+  <g stroke="#8fa8a6" stroke-width="3" stroke-linejoin="round">
+    <path d="M 254 176 H 296" stroke-linecap="round"/>
+    <rect x="258" y="180" width="15" height="62" rx="4" fill="#e6b0ac"/>
+    <rect x="278" y="180" width="15" height="52" rx="4" fill="#cdb8dd"/>
+  </g>
+
+  <!-- ============================================================
+       THE SAUNA. The control plate on the right holds the
+       temperature dial, which scenes.js draws and makes draggable
+       (see `scene.dial` in rooms.js). The recess circle below marks
+       where it mounts — keep the two in sync.
+       ============================================================ -->
+  <g>
+    <rect x="300" y="76" width="410" height="18" rx="5" fill="#c2874a" stroke="#a9713c" stroke-width="3"/>
+    <rect x="310" y="92" width="390" height="304" fill="#dda269" stroke="#a9713c" stroke-width="3"/>
+    <rect x="310" y="92" width="390" height="304" fill="url(#baPlanks)"/>
+
+    <!-- glass door, with the bench and heater behind it -->
+    <rect x="340" y="124" width="180" height="268" rx="6" fill="#cfe3e2" opacity="0.75"
+          stroke="#a9713c" stroke-width="3"/>
+    <rect x="356" y="296" width="148" height="14" rx="4" fill="#c2874a" opacity="0.85"/>
+    <rect x="356" y="240" width="148" height="12" rx="4" fill="#c2874a" opacity="0.6"/>
+    <rect x="452" y="326" width="52" height="62" rx="5" fill="#9c8c7d" opacity="0.9"/>
+    <g fill="#b9a894" opacity="0.95">
+      <circle cx="466" cy="336" r="7"/>
+      <circle cx="482" cy="332" r="6"/>
+      <circle cx="494" cy="338" r="7"/>
+      <circle cx="474" cy="346" r="6"/>
+    </g>
+    <rect x="506" y="230" width="7" height="44" rx="3.5" fill="#f2e7d6" stroke="#a9713c" stroke-width="2"/>
+
+    <!-- control plate: the dial mounts in the recess -->
+    <rect x="540" y="140" width="146" height="192" rx="8" fill="#f2e7d6" stroke="#a9713c" stroke-width="3"/>
+    <circle cx="613" cy="225" r="60" fill="#e4d6c0" stroke="#c9b49a" stroke-width="2"/>
+    <rect x="576" y="300" width="74" height="7" rx="3.5" fill="#c9b49a"/>
+    <circle cx="560" cy="158" r="5" fill="#cf7b52"/>
+  </g>
+
+  <g transform="translate(272 450) scale(0.66)">
+    <path d="M -22 -26 q -20 -2 -18 -22 q 1 -9 9 -9" fill="none" stroke="#2f2a28"
+          stroke-width="9" stroke-linecap="round"/>
+    <circle cx="-8" cy="-24" r="24" fill="#2f2a28"/>
+    <path d="M 2 -66 q 22 2 22 30 q 0 22 -8 36 h -22 q -6 -30 -4 -46 z" fill="#332d2a"/>
+    <rect x="4"  y="-26" width="11" height="26" rx="5.5" fill="#2f2a28"/>
+    <rect x="17" y="-24" width="11" height="24" rx="5.5" fill="#3d3532"/>
+    <ellipse cx="9.5" cy="-1" rx="7" ry="4" fill="#3d3532"/>
+    <ellipse cx="22.5" cy="-1" rx="7" ry="4" fill="#463d39"/>
+    <circle cx="16" cy="-78" r="18" fill="#332d2a"/>
+    <path d="M 28 -82 q 20 -2 20 8 q 0 9 -14 9 q -12 0 -12 -8 z" fill="#3d3532"/>
+    <circle cx="46" cy="-76" r="3.4" fill="#15110f"/>
+    <!-- ears back -->
+    <path d="M 4 -90 q -14 2 -12 14 q 2 12 14 9 z" fill="#241f1d"/>
+    <path d="M 24 -92 q 12 -2 14 10 q 2 11 -9 12 z" fill="#241f1d"/>
+    <circle cx="27" cy="-82" r="2.8" fill="#f3e6c8"/>
+    <path d="M 3 -62 q 16 9 28 1" fill="none" stroke="#cf7b52" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="18" cy="-55" r="3.6" fill="#e6b45e"/>
+  </g>
+
+  <!-- ============================================================
+       THE LOOSE FLOOR TILE. Drawn shut here; scenes.js lifts it and
+       puts the letter card underneath once the dial is right.
+       ============================================================ -->
+  <g>
+    <rect x="372" y="410" width="72" height="40" rx="3" fill="#bcd3d1" stroke="#7f9e9c" stroke-width="2"/>
+    <path d="M 380 418 l 10 6 l -6 8 l 12 5" fill="none" stroke="#9fbcba" stroke-width="1.6"
+          stroke-linecap="round"/>
+  </g>
+
+</svg>

@@ -1,0 +1,11 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# Obsidian, in case a vault folder ever ends up alongside this one
+.obsidian/

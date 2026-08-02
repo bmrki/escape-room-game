@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460"
+     role="img" aria-label="Drzwi wejściowe">
+
+  <defs>
+    <pattern id="fdFloor" width="52" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 0 0.5 H 52 M 26 0.5 V 16" fill="none" stroke="#a98a70" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- wall, floor, skirting -->
+  <rect x="0" y="0" width="720" height="404" fill="#efdfc6"/>
+  <rect x="0" y="404" width="720" height="56" fill="#d8bf9c"/>
+  <rect x="0" y="404" width="720" height="56" fill="url(#fdFloor)"/>
+  <rect x="0" y="396" width="720" height="10" fill="#bda486"/>
+
+  <!-- door frame and leaf -->
+  <g stroke="#8a6f56" stroke-width="4" stroke-linejoin="round">
+    <rect x="222" y="46" width="276" height="354" rx="4" fill="#a9846a"/>
+    <rect x="238" y="62" width="244" height="338" rx="3" fill="#c08f68"/>
+  </g>
+  <g stroke="#8a6f56" stroke-width="3" fill="#b5825e">
+    <rect x="262" y="88" width="86" height="106" rx="4"/>
+    <rect x="372" y="88" width="86" height="106" rx="4"/>
+    <rect x="262" y="238" width="86" height="132" rx="4"/>
+    <rect x="372" y="238" width="86" height="132" rx="4"/>
+  </g>
+
+  <!-- handle -->
+  <g stroke="#8a6f56" stroke-width="2.5">
+    <rect x="446" y="206" width="14" height="34" rx="7" fill="#c9a55f"/>
+    <circle cx="453" cy="223" r="4" fill="#8a6f56" stroke="none"/>
+  </g>
+
+  <!-- the letter lock: a brass plate with four windows -->
+  <g>
+    <rect x="272" y="198" width="176" height="52" rx="6" fill="#c9a55f" stroke="#8a6f56" stroke-width="3"/>
+    <g fill="#5c4b40" stroke="#8a6f56" stroke-width="2">
+      <rect x="286" y="210" width="30" height="28" rx="3"/>
+      <rect x="324" y="210" width="30" height="28" rx="3"/>
+      <rect x="362" y="210" width="30" height="28" rx="3"/>
+      <rect x="400" y="210" width="30" height="28" rx="3"/>
+    </g>
+    <circle cx="360" cy="266" r="7" fill="#8a6f56"/>
+    <path d="M 360 266 v 10" stroke="#8a6f56" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- transom window above the door -->
+  <g stroke="#8a6f56" stroke-width="3.5" stroke-linejoin="round">
+    <rect x="248" y="12" width="224" height="30" rx="4" fill="#cfe0ec"/>
+    <path d="M 322 12 V 42 M 398 12 V 42" stroke-width="2.5"/>
+  </g>
+
+  <!-- coat hooks with coats -->
+  <g stroke="#a98a70" stroke-width="3" stroke-linejoin="round">
+    <rect x="60" y="118" width="132" height="12" rx="4" fill="#c9b18c"/>
+    <path d="M 88 130 v 12 M 130 130 v 12 M 168 130 v 12" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g stroke="#a98a70" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M 88 142 l -26 22 l 8 96 h 38 l 6 -96 z" fill="#8fa88f"/>
+    <path d="M 168 142 l -22 20 l 8 84 h 32 l 4 -84 z" fill="#cf7b52"/>
+  </g>
+
+  <!-- umbrella stand -->
+  <g stroke="#a98a70" stroke-width="3" stroke-linejoin="round">
+    <rect x="556" y="316" width="52" height="80" rx="5" fill="#b7a68f"/>
+    <path d="M 570 316 V 258" stroke="#6b5648" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 594 316 V 268" stroke="#7f96ad" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 560 258 a 10 10 0 0 1 20 0" fill="none" stroke="#6b5648" stroke-width="4"/>
+  </g>
+
+  <!-- A carton by the door, still taped shut. Clear of the umbrella stand, which ends x=608. -->
+  <g stroke="#a98a70" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M 626 320 h 74 v 76 h -74 z" fill="#c9a45f"/>
+    <path d="M 626 320 l 11 -14 h 52 l 11 14" fill="#dbb87a"/>
+    <path d="M 663 320 V 396" stroke-width="2"/>
+    <rect x="648" y="338" width="30" height="12" rx="2" fill="#efe4cd" stroke-width="2"/>
+  </g>
+
+  <!-- doormat -->
+  <g stroke="#a98a70" stroke-width="3" stroke-linejoin="round">
+    <rect x="266" y="410" width="188" height="38" rx="4" fill="#c9a48c"/>
+    <rect x="278" y="418" width="164" height="22" rx="3" fill="none" stroke="#b08d70"
+          stroke-width="2" stroke-dasharray="6 5"/>
+  </g>
+
+  <g transform="translate(150 400) scale(0.72)">
+    <path d="M -22 -26 q -20 -2 -18 -22 q 1 -9 9 -9" fill="none" stroke="#2f2a28"
+          stroke-width="9" stroke-linecap="round"/>
+    <circle cx="-8" cy="-24" r="24" fill="#2f2a28"/>
+    <path d="M 2 -66 q 22 2 22 30 q 0 22 -8 36 h -22 q -6 -30 -4 -46 z" fill="#332d2a"/>
+    <rect x="4"  y="-26" width="11" height="26" rx="5.5" fill="#2f2a28"/>
+    <rect x="17" y="-24" width="11" height="24" rx="5.5" fill="#3d3532"/>
+    <ellipse cx="9.5" cy="-1" rx="7" ry="4" fill="#3d3532"/>
+    <ellipse cx="22.5" cy="-1" rx="7" ry="4" fill="#463d39"/>
+    <circle cx="16" cy="-78" r="18" fill="#332d2a"/>
+    <path d="M 28 -82 q 20 -2 20 8 q 0 9 -14 9 q -12 0 -12 -8 z" fill="#3d3532"/>
+    <circle cx="46" cy="-76" r="3.4" fill="#15110f"/>
+    <path d="M 4 -92 q -12 -6 -14 8 q -2 14 12 15 z" fill="#241f1d"/>
+    <path d="M 24 -94 q 10 -9 16 2 q 5 11 -6 14 z" fill="#241f1d"/>
+    <circle cx="27" cy="-82" r="2.8" fill="#f3e6c8"/>
+    <path d="M 3 -62 q 16 9 28 1" fill="none" stroke="#cf7b52" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="18" cy="-55" r="3.6" fill="#e6b45e"/>
+  </g>
+
+</svg>

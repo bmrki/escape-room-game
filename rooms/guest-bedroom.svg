@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460"
+     role="img" aria-label="Pokój gościnny">
+
+  <defs>
+    <pattern id="gbFloor" width="48" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 0 0.5 H 48 M 24 0.5 V 15" fill="none" stroke="#a08fae" stroke-width="1" opacity="0.28"/>
+    </pattern>
+  </defs>
+
+  <!-- wall, floor, skirting -->
+  <rect x="0" y="0" width="720" height="404" fill="#ece5f3"/>
+  <rect x="0" y="404" width="720" height="56" fill="#cfc0b0"/>
+  <rect x="0" y="404" width="720" height="56" fill="url(#gbFloor)"/>
+  <rect x="0" y="396" width="720" height="10" fill="#b6a693"/>
+
+  <!-- wardrobe -->
+  <g stroke="#9d86a5" stroke-width="3" stroke-linejoin="round">
+    <rect x="24" y="150" width="116" height="246" rx="4" fill="#c3aecb"/>
+    <path d="M 82 150 V 396" stroke-width="2.5"/>
+    <rect x="70" y="256" width="6" height="26" rx="3" fill="#8d7a95" stroke-width="1.4"/>
+    <rect x="88" y="256" width="6" height="26" rx="3" fill="#8d7a95" stroke-width="1.4"/>
+  </g>
+
+  <!-- single bed -->
+  <g stroke="#a98a70" stroke-width="3" stroke-linejoin="round">
+    <rect x="400" y="212" width="292" height="72" rx="10" fill="#c8a98b"/>
+    <rect x="414" y="224" width="264" height="48" rx="7" fill="#d7bb9c"/>
+    <rect x="392" y="284" width="308" height="112" rx="10" fill="#fdf7ee"/>
+    <rect x="414" y="294" width="112" height="42" rx="12" fill="#ece1d2"/>
+    <rect x="392" y="342" width="308" height="54" rx="10" fill="#cdb8dd"/>
+    <path d="M 392 360 H 700" stroke="#b7a0ca" stroke-width="2.5"/>
+  </g>
+
+  <!-- nightstand, with the keepsake box on top -->
+  <g stroke="#a98a70" stroke-width="3" stroke-linejoin="round">
+    <rect x="294" y="296" width="96" height="12" rx="4" fill="#c8a98b"/>
+    <rect x="302" y="308" width="80" height="88" fill="#b99a7c"/>
+    <path d="M 302 352 H 382" stroke-width="2.5"/>
+    <rect x="326" y="326" width="32" height="6" rx="3" fill="#95795f" stroke-width="1.4"/>
+    <rect x="326" y="370" width="32" height="6" rx="3" fill="#95795f" stroke-width="1.4"/>
+  </g>
+  <g stroke="#8f7550" stroke-width="2.5" stroke-linejoin="round">
+    <rect x="312" y="266" width="60" height="30" rx="4" fill="#c2874a"/>
+    <path d="M 312 276 H 372" stroke-width="2"/>
+    <rect x="336" y="272" width="12" height="8" rx="2" fill="#e6b45e" stroke-width="1.6"/>
+  </g>
+
+  <!-- Stepladder, left standing in the clear strip between the wardrobe and the nightstand.
+       Rung ends are interpolated along the two front legs, so they meet them exactly. -->
+  <g stroke="#8f7550" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 216 246 L 250 394"/>
+    <path d="M 196 244 L 172 394 M 214 244 L 238 394"/>
+    <path d="M 190 282 H 220 M 184 320 H 226 M 178 358 H 232"/>
+  </g>
+  <rect x="186" y="234" width="34" height="12" rx="3" fill="#c2874a" stroke="#8f7550"
+        stroke-width="3"/>
+
+  <!-- rug -->
+  <ellipse cx="250" cy="430" rx="140" ry="24" fill="#c9b7d8" opacity="0.5"/>
+
+  <g transform="translate(236 442) scale(0.72)">
+    <path d="M -44 -18 q -22 6 -14 22 q 6 12 22 6" fill="none" stroke="#2f2a28"
+          stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-24" rx="48" ry="24" fill="#332d2a"/>
+    <circle cx="-24" cy="-26" r="20" fill="#2f2a28"/>
+    <circle cx="30" cy="-22" r="17" fill="#3d3532"/>
+    <path d="M 40 -18 q 20 0 20 9 q 0 8 -14 8 q -12 0 -12 -8 z" fill="#463d39"/>
+    <circle cx="58" cy="-11" r="3.2" fill="#15110f"/>
+    <path d="M 22 -36 q -6 -12 6 -14 q 12 -2 12 10 z" fill="#241f1d"/>
+    <path d="M 34 -26 q 5 4 10 0" fill="none" stroke="#15110f" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="34" cy="-4" rx="12" ry="5" fill="#3d3532"/>
+    <ellipse cx="50" cy="-4" rx="10" ry="5" fill="#463d39"/>
+    <path d="M 16 -30 q 6 12 16 12" fill="none" stroke="#cf7b52" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="30" cy="-19" r="3.4" fill="#e6b45e"/>
+  </g>
+
+  <!-- The wall strip from x 150..670, y 80..208 is left clear: scenes.js hangs the
+       framed photographs there. -->
+
+</svg>
