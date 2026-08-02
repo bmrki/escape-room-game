@@ -288,7 +288,7 @@ const ROOMS = [
         dog: { shape: "M322,349 H424 V426 H322 Z", label: "Pies" },
         // The skyline above the railing, and the railing itself. Both stop short of the
         // telescope so it keeps its own hit area.
-        rooftops: { shape: "M0,150 H438 V244 H0 Z", label: "Dachy naprzeciwko" },
+        panorama: { shape: "M0,150 H438 V244 H0 Z", label: "Widok z balkonu" },
         // Two segments, so the gap leaves the plant's own hit area untouched.
         railing: { shape: "M0,244 H84 V324 H0 Z M200,244 H438 V324 H200 Z", label: "Barierka" },
         table: { shape: "M212,314 H332 V424 H212 Z", label: "Stolik" },

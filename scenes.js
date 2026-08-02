@@ -180,7 +180,7 @@ const ROOM_FLAVOUR = {
   },
 
   balcony: {
-    rooftops:
+    panorama:
       "Panorama Gdańska, drzewa, na jednym siedzi ptak, który daje o sobie znać od 4 rano.",
     railing:
       "Niżej parking, na którym nic się nie dzieje.",

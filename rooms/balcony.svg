@@ -12,22 +12,91 @@
     </pattern>
   </defs>
 
-  <!-- sky and the view over the rooftops -->
+  <!-- ============================================================
+       THE VIEW — this is what they actually see from this balcony:
+       allotment gardens immediately below, and the shipyard cranes
+       standing over the skyline behind them. Drawn back to front,
+       so the railing below covers the lower half of it.
+       ============================================================ -->
   <rect x="0" y="0" width="720" height="340" fill="url(#bcSky)"/>
-  <circle cx="586" cy="236" r="30" fill="#f7dfa8" opacity="0.85"/>
-  <g fill="#a9a2ac" opacity="0.55">
-    <rect x="20"  y="212" width="54" height="96"/>
-    <rect x="84"  y="242" width="42" height="66"/>
-    <rect x="140" y="196" width="66" height="112"/>
-    <rect x="222" y="232" width="48" height="76"/>
-    <rect x="286" y="180" width="40" height="128"/>
-    <rect x="340" y="226" width="72" height="82"/>
-    <rect x="430" y="204" width="50" height="104"/>
-    <rect x="500" y="240" width="60" height="68"/>
-    <rect x="578" y="214" width="46" height="94"/>
-    <rect x="642" y="238" width="58" height="70"/>
+  <circle cx="612" cy="184" r="28" fill="#f7dfa8" opacity="0.8"/>
+
+  <!-- the old town on the far horizon: blocks, a brick tower, a spire -->
+  <g fill="#9aa0ad" opacity="0.4">
+    <rect x="22" y="218" width="32" height="36"/>
+    <rect x="60" y="230" width="24" height="24"/>
+    <path d="M 92 254 V 202 h 28 v 52 z"/>
+    <path d="M 96 202 v -9 h 5 v 9 z M 106 202 v -9 h 5 v 9 z M 116 202 v -9 h 4 v 9 z"/>
+    <rect x="128" y="236" width="28" height="18"/>
+    <path d="M 164 254 V 216 l 13 -20 l 13 20 v 38 z"/>
+    <rect x="200" y="240" width="38" height="14"/>
   </g>
-  <path d="M 296 180 V 156 h 8 v 24 z" fill="#a9a2ac" opacity="0.55"/>
+
+  <!-- shipyard sheds, long and low -->
+  <g fill="#8f96a2" opacity="0.45">
+    <rect x="248" y="232" width="196" height="22"/>
+    <rect x="452" y="238" width="150" height="16"/>
+    <rect x="612" y="234" width="96" height="20"/>
+  </g>
+
+  <!-- The cranes. A hammerhead, not a pylon: a lattice tower with a long jib to one side and
+       a short counter-jib to the other, a hoist hanging off it. The asymmetry is the whole
+       tell — a symmetrical A-frame reads as an electricity pylon instead. -->
+  <g stroke="#b5714a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(322 258)">
+      <path d="M -7 0 V -66 M 7 0 V -66 M -14 0 H 14 M -7 -66 H 7"/>
+      <path d="M -7 -14 L 7 -28 M 7 -14 L -7 -28 M -7 -34 L 7 -48 M 7 -34 L -7 -48"/>
+      <path d="M -22 -70 H 58 M 0 -66 V -86 M 0 -86 L -20 -70 M 0 -86 L 54 -70"/>
+      <path d="M 42 -70 V -50"/>
+      <rect x="37" y="-52" width="10" height="8" fill="#b5714a" stroke="none"/>
+    </g>
+    <g transform="translate(452 258) scale(0.84)" opacity="0.86">
+      <path d="M -7 0 V -66 M 7 0 V -66 M -14 0 H 14 M -7 -66 H 7"/>
+      <path d="M -7 -14 L 7 -28 M 7 -14 L -7 -28 M -7 -34 L 7 -48 M 7 -34 L -7 -48"/>
+      <path d="M -22 -70 H 58 M 0 -66 V -86 M 0 -86 L -20 -70 M 0 -86 L 54 -70"/>
+      <path d="M 42 -70 V -50"/>
+      <rect x="37" y="-52" width="10" height="8" fill="#b5714a" stroke="none"/>
+    </g>
+    <g transform="translate(566 258) scale(0.66)" opacity="0.7">
+      <path d="M -7 0 V -66 M 7 0 V -66 M -14 0 H 14 M -7 -66 H 7"/>
+      <path d="M -7 -14 L 7 -28 M 7 -14 L -7 -28 M -7 -34 L 7 -48 M 7 -34 L -7 -48"/>
+      <path d="M -22 -70 H 58 M 0 -66 V -86 M 0 -86 L -20 -70 M 0 -86 L 54 -70"/>
+      <path d="M 42 -70 V -50"/>
+      <rect x="37" y="-52" width="10" height="8" fill="#b5714a" stroke="none"/>
+    </g>
+    <g transform="translate(660 258) scale(0.52)" opacity="0.56">
+      <path d="M -7 0 V -66 M 7 0 V -66 M -14 0 H 14 M -7 -66 H 7"/>
+      <path d="M -22 -70 H 58 M 0 -66 V -86 M 0 -86 L -20 -70 M 0 -86 L 54 -70"/>
+      <path d="M 42 -70 V -50"/>
+    </g>
+  </g>
+
+  <!-- Allotments, in the middle distance. Warm yellow-green on purpose: the railing in front
+       is a cool green, and an allotment band in the same tone merged straight into it. -->
+  <rect x="0" y="258" width="720" height="82" fill="#c6cf8b" opacity="0.8"/>
+  <g stroke="#a3ac68" stroke-width="1.8" fill="none" opacity="0.75">
+    <path d="M 0 284 H 720 M 0 310 H 720"/>
+    <path d="M 96 258 V 340 M 244 258 V 340 M 398 258 V 340 M 548 258 V 340 M 664 258 V 340"/>
+  </g>
+  <g stroke="#8a6a58" stroke-width="1.6">
+    <g fill="#e2b48c">
+      <rect x="42" y="292" width="26" height="15"/>
+      <rect x="302" y="288" width="24" height="14"/>
+      <rect x="486" y="296" width="28" height="16"/>
+      <rect x="606" y="290" width="22" height="13"/>
+    </g>
+    <g fill="#c2764a">
+      <path d="M 38 292 l 17 -11 l 17 11 z"/>
+      <path d="M 298 288 l 16 -10 l 16 10 z"/>
+      <path d="M 482 296 l 18 -11 l 18 11 z"/>
+      <path d="M 602 290 l 15 -9 l 15 9 z"/>
+    </g>
+  </g>
+  <g fill="#6f9159" opacity="0.9">
+    <circle cx="124" cy="298" r="11"/><circle cx="200" cy="312" r="9"/>
+    <circle cx="358" cy="302" r="12"/><circle cx="434" cy="292" r="8"/>
+    <circle cx="552" cy="308" r="10"/><circle cx="690" cy="298" r="11"/>
+  </g>
 
   <!-- railing -->
   <g fill="#7f9a6a" stroke="#63784f" stroke-width="2">
