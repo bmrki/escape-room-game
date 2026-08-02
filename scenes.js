@@ -1018,6 +1018,14 @@ function makeJarInteractive(jar, overlay, beaker, onUse) {
   };
 
   jar.addEventListener("pointerdown", (event) => {
+    // Touch taps, never touch drags. Dragging a jar with a finger was unreliable in a way
+    // that also broke tapping: the smallest wobble set `moved`, so pointerup did nothing
+    // (not over the beaker) and the click handler below then skipped too, because it only
+    // fires when nothing moved. The result was a tap that did nothing at all. Bailing out
+    // here leaves `moved` false and lets the native click through, which is the whole
+    // interaction on a phone. Mouse and pen keep dragging.
+    if (event.pointerType === "touch") return;
+
     event.preventDefault();
     dragging = true;
     moved = false;

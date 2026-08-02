@@ -259,9 +259,9 @@ body {
 
 .jar {
   cursor: grab;
-  /* Same reason as the sauna dial: without this a touch drag scrolls the page instead of
-     moving the jar. Tapping still works as a fallback, but dragging is the obvious gesture. */
-  touch-action: none;
+  /* Deliberately NOT `touch-action: none` — unlike the dial, jars are not dragged by touch
+     at all (see the pointerdown handler in scenes.js), so the page should still scroll
+     normally when a finger happens to start on one. */
   outline: none;
 }
 
